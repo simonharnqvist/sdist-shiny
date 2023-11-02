@@ -6,8 +6,8 @@ setup(
         "shiny",
         "pandas",
         "numpy",
-        "seaborn"],
-    dependency_links=["https://github.com/simonharnqvist/DISMaL.git#egg=dismal"],
+        "seaborn",
+        "dismal @ git+https://github.com/simonharnqvist/DISMaL.git#egg=dismal",
     version='0.0.1',
     entry_points={
         'console_scripts': [
