@@ -1,0 +1,2 @@
+[console_scripts]
+sdist-shiny = sdist_shiny.run_app:main

@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+sdist_shiny/__init__.py
+sdist_shiny/app.py
+sdist_shiny/run_app.py
+sdist_shiny.egg-info/PKG-INFO
+sdist_shiny.egg-info/SOURCES.txt
+sdist_shiny.egg-info/dependency_links.txt
+sdist_shiny.egg-info/entry_points.txt
+sdist_shiny.egg-info/requires.txt
+sdist_shiny.egg-info/top_level.txt
