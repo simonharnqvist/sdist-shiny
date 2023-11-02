@@ -7,7 +7,7 @@ setup(
         "pandas",
         "numpy",
         "seaborn",
-        "dismal @ git+https://github.com/simonharnqvist/DISMaL.git#egg=dismal",
+        "dismal @ git+https://github.com/simonharnqvist/DISMaL.git#egg=dismal"],
     version='0.0.1',
     entry_points={
         'console_scripts': [

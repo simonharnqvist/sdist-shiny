@@ -2,3 +2,8 @@ Metadata-Version: 2.1
 Name: sdist-shiny
 Version: 0.0.1
 License-File: LICENSE
+Requires-Dist: shiny
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: seaborn
+Requires-Dist: dismal@ git+https://github.com/simonharnqvist/DISMaL.git#egg=dismal

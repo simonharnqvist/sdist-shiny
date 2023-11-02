@@ -2,4 +2,4 @@ shiny
 pandas
 numpy
 seaborn
-dismal
+dismal@ git+https://github.com/simonharnqvist/DISMaL.git#egg=dismal
