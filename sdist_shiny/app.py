@@ -33,7 +33,7 @@ app_ui = ui.page_fluid(
             ui.input_slider("mig4", "M_43", min=0, max=5, value=0, step=0.05),
         ),),
         ui.row(ui.input_numeric("blocklen", ui.strong("Block length"), 500, min=0, max=10000),
-            ui.input_numeric("cutoff", ui.strong("S cutoff"), 20, min=1, max=1000)),
+            ui.input_numeric("cutoff", ui.strong("S cutoff"), 30, min=1, max=1000)),
         ui.row(ui.output_plot("hist")
     ),
     title="Segregating sites distribution",)
@@ -65,7 +65,10 @@ def server(input, output, session):
         df["s"] = df.index
         df = df.melt(id_vars=["s"], var_name="state", value_name="Pr(S)")
     
-        g = sns.lineplot(df, x="s", y="Pr(S)", hue="state")
+        g = sns.FacetGrid(df, col="state")
+        g.map(sns.barplot, "s", "Pr(S)")
+        
+        #sns.barplot(df[df["state"] == "state_1"], x="s", y="Pr(S)", hue="state")
         g.set(xlabel = "Number of segregating sites", ylabel="Density", xticks=[i for i in range(0, input.cutoff()+1, 5)])
         return g
     
