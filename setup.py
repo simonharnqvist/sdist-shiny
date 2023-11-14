@@ -13,5 +13,7 @@ setup(
         'console_scripts': [
             'sdist-shiny=sdist_shiny.run_app:main'
         ]
-    }
+    },
+    include_package_data=True,
+    package_data={'': ["static/*"]}
 )

@@ -10,3 +10,4 @@ sdist_shiny.egg-info/dependency_links.txt
 sdist_shiny.egg-info/entry_points.txt
 sdist_shiny.egg-info/requires.txt
 sdist_shiny.egg-info/top_level.txt
+sdist_shiny/static/gim_params.png

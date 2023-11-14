@@ -2,6 +2,7 @@ from shiny import ui, render, App
 from shiny.types import ImgData
 import pandas as pd
 import matplotlib.pyplot as plt
+from pathlib import Path
 from dismal.model_instance import ModelInstance
 from dismal.demography import Epoch
 
@@ -31,7 +32,7 @@ app_ui = ui.page_fluid(
                            ),
                            ui.card(
                                ui.card_header("Model parameters"),
-                               ui.output_image("image"),
+                               ui.img(src="gim_params.png", style="width:600px; height:400px; display: block; margin-left: auto; margin-right: auto;"),
                                full_screen=True,
                            ),
                             ui.row(ui.input_numeric("blocklen", ui.strong("Block length"), 100, min=1, max=10000),
@@ -90,14 +91,16 @@ def server(input, output, session):
         return fig
 
 
-    @output
-    @render.image
-    def image():
-        from pathlib import Path
-        dir = Path(__file__).resolve().parent
-        img: ImgData = {"src": str(dir / "gim_params.png"), "width":"700px", "style":"display: block; margin-left: auto; margin-right: auto;"}
-        return img
+    # @output
+    # @render.image
+    # def image():
+    #     from pathlib import Path
+    #     dir = Path(__file__).resolve().parent / "static"
+    #     img: ImgData = {"src": "https://github.com/simonharnqvist/sdist-shiny/blob/main/sdist_shiny/gim_params.png", 
+    #                     "width":"700px", "style":"display: block; margin-left: auto; margin-right: auto;"}
+    #     return img
 
 
-app = App(app_ui, server)
+static_dir = Path(__file__).resolve().parent / "static"
+app = App(app_ui, server, static_assets=static_dir)
 
