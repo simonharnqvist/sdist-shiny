@@ -1,5 +1,0 @@
-shiny
-pandas
-numpy
-seaborn
-dismal@ git+https://github.com/simonharnqvist/DISMaL.git#egg=dismal
