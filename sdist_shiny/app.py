@@ -1,6 +1,5 @@
 from shiny import ui, render, App
 from shiny.types import ImgData
-import pandas as pd
 import matplotlib.pyplot as plt
 from pathlib import Path
 from dismal.model_instance import ModelInstance
