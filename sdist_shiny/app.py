@@ -78,9 +78,9 @@ def server(input, output, session):
         ax1.bar(s, s1)
         ax2.bar(s, s2)
         ax3.bar(s, s3)
-        ax1.set_title("S1 (within population 1)", fontsize=25)
-        ax2.set_title("S2 (within population 2)", fontsize=25)
-        ax3.set_title("S3 (between populations)", fontsize=25)
+        ax1.set_title("S1 (within population 1)", fontsize=15)
+        ax2.set_title("S2 (within population 2)", fontsize=15)
+        ax3.set_title("S3 (between populations)", fontsize=15)
 
         fig.add_subplot(111, frameon=False)
         plt.tick_params(labelcolor='none', top=False, bottom=False, left=False, right=False)
